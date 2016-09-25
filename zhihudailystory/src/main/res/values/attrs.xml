@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="customTextColor" format="color"/>
+    <attr name="titleBarColor" format="color"/>
+    <attr name="textColorHint" format="color"/>
+    <attr name="normalBackground" format="reference|color"/>
+    <attr name="cardViewBackground" format="reference|color"/>
+    <attr name="drawerHeaderBackground" format="reference|color"/>
+    <attr name="drawerHomeBackground" format="reference|color"/>
+    <attr name="drawerHeaderTextColor" format="color"/>
+    <attr name="imageValue" format="reference"/>
+</resources>

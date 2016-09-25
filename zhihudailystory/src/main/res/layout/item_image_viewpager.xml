@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/image_foreground">
+
+        <ImageView
+            android:id="@+id/viewpager_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/viewpager_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/image_indicator_layout"
+        android:layout_margin="@dimen/title_in_image_margin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_in_image_text_size"
+        tools:text="标题"/>
+
+    <LinearLayout
+        android:id="@+id/image_indicator_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+</RelativeLayout>

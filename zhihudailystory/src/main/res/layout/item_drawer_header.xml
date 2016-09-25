@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/drawer_header_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/drawerHeaderBackground"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/menu_avatar"/>
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_drawer_login_text"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_layout"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/offline_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/ic_file_download_white_18dp"
+                android:drawableStart="@drawable/ic_file_download_white_18dp"
+                android:text="@string/main_drawer_offline_download"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/my_favor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:drawableLeft="@drawable/ic_star_white_18dp"
+                android:drawableStart="@drawable/ic_star_white_18dp"
+                android:text="@string/main_drawer_collect"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/home_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/drawerHomeBackground"
+        android:drawableLeft="@drawable/ic_home_blue_500_24dp"
+        android:drawablePadding="20dp"
+        android:drawableStart="@drawable/ic_home_blue_500_24dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/main_drawer_homepage"
+        android:textColor="@color/blue_400"/>
+</LinearLayout>

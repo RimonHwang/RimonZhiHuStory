@@ -1,0 +1,60 @@
+<resources>
+
+    <style name="DayTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:colorBackground">@color/gray_200</item>
+
+        <item name="customTextColor">@color/black</item>
+        <item name="drawerHeaderTextColor">@color/white</item>
+        <item name="normalBackground">@color/white</item>
+        <item name="cardViewBackground">@color/white</item>
+        <item name="drawerHeaderBackground">@color/colorPrimary</item>
+        <item name="drawerHomeBackground">@color/gray_400</item>
+        <item name="textColorHint">@color/black</item>
+
+        <item name="actionOverflowMenuStyle">@style/DayOverflowMenuStyle</item>
+    </style>
+
+    <style name="NightTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/gray_800</item>
+        <item name="colorAccent">@color/yellow</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:colorBackground">@color/gray_900</item>
+
+        <item name="customTextColor">@color/white</item>
+        <item name="drawerHeaderTextColor">@color/gray_400</item>
+        <item name="normalBackground">@color/gray_700</item>
+        <item name="cardViewBackground">@color/gray_800</item>
+        <item name="drawerHeaderBackground">@color/black</item>
+        <item name="drawerHomeBackground">@color/gray_900</item>
+        <item name="textColorHint">@color/white</item>
+
+        <item name="actionOverflowMenuStyle">@style/NightOverflowMenuStyle</item>
+    </style>
+
+    <style name="DayOverflowMenuStyle" parent="@style/OverflowMenuStyle">
+        <item name="android:popupBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="NightOverflowMenuStyle" parent="@style/OverflowMenuStyle">
+        <item name="android:popupBackground">@color/gray_900</item>
+    </style>
+
+    <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <!-- 是否覆盖锚点，默认为true，即盖住Toolbar -->
+        <item name="overlapAnchor">false</item>
+        <!-- 弹出层背景颜色 -->
+        <!--<item name="android:popupBackground">@color/colorPrimary</item>-->
+        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
+        <item name="android:dropDownVerticalOffset">5dp</item>
+        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="image_in_item_width">80dp</dimen>
+    <dimen name="image_in_item_height">80dp</dimen>
+    <dimen name="title_in_image_margin">20dp</dimen>
+    <dimen name="title_in_image_text_size">20sp</dimen>
+    <dimen name="item__text_size">16sp</dimen>
+</resources>
