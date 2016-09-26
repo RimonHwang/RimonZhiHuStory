@@ -59,11 +59,9 @@ public class WelcomeActivity extends Activity {
         authorInfo = sharedPreferences.getString(Constants.KEY_WELCOME_AUTHOR_INFO, "");
 
         File file = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), Constants.WELCOME_FILE_NAME);
+
         if (file.exists() && !DateUtil.isExpired(file.lastModified())) {
-            String filePath = getExternalFilesDir(Environment.DIRECTORY_PICTURES).getAbsolutePath() + File.separator + Constants.WELCOME_FILE_NAME;
-            welcomeImage.setImageBitmap(FileUtil.getSmallBitmap(filePath));
-            infoText.setVisibility(View.VISIBLE);
-            authorText.setText(authorInfo);
+            loadLocalImage();
         } else {
             requestWelcomeImage();
         }
@@ -76,6 +74,8 @@ public class WelcomeActivity extends Activity {
         }, 3000);
     }
 
+
+
     @Override
     protected void onDestroy() {
         myHandler.removeCallbacksAndMessages(null);
@@ -87,11 +87,12 @@ public class WelcomeActivity extends Activity {
             @Override
             public void onNext(Object object) {
                 final StartImage startImage = (StartImage) object;
+                SharedPreferences.Editor editor = getSharedPreferences(Constants.PREFERENCES_NAME_WELCOME, MODE_PRIVATE).edit();
+                editor.putString(Constants.KEY_WELCOME_IMAGE_URL, startImage.img);
+                editor.putString(Constants.KEY_WELCOME_AUTHOR_INFO, startImage.text);
+                editor.apply();
+
                 if (!startImage.img.equals(welcomeImageUrl)) {
-                    SharedPreferences.Editor editor = getSharedPreferences(Constants.PREFERENCES_NAME_WELCOME, MODE_PRIVATE).edit();
-                    editor.putString(Constants.KEY_WELCOME_IMAGE_URL, startImage.img);
-                    editor.putString(Constants.KEY_WELCOME_AUTHOR_INFO, startImage.text);
-                    editor.apply();
                     SimpleTarget<Bitmap> target = new SimpleTarget<Bitmap>() {
                         @Override
                         public void onResourceReady(final Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
@@ -108,9 +109,18 @@ public class WelcomeActivity extends Activity {
                         }
                     };
                     ImageLoaderUtils.load(WelcomeActivity.this, startImage.img, null, null, target);
+                }else {
+                    loadLocalImage();
                 }
             }
         });
+    }
+
+    private void loadLocalImage() {
+        String filePath = getExternalFilesDir(Environment.DIRECTORY_PICTURES).getAbsolutePath() + File.separator + Constants.WELCOME_FILE_NAME;
+        welcomeImage.setImageBitmap(FileUtil.getSmallBitmap(filePath));
+        infoText.setVisibility(View.VISIBLE);
+        authorText.setText(authorInfo);
     }
 
     private static class MyHandler extends Handler {

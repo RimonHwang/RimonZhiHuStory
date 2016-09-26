@@ -6,9 +6,14 @@
         android:id="@+id/night_theme"
         android:title="@string/main_toolbar_menu_night_theme"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/check_update"
+        android:title="@string/main_toolbar_menu_check_update"
+        app:showAsAction="never"/>
     <item
         android:id="@+id/about"
-        android:title="@string/about"
+        android:title="@string/main_toolbar_menu_about"
         app:showAsAction="never"/>
 
 </menu>

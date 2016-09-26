@@ -17,6 +17,7 @@
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="com.developer.rimon.zhihudaily.permission.MIPUSH_RECEIVE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.xiaomi.market.sdk.UPDATE" />
 
     <permission
         android:name="com.developer.rimon.zhihudaily.permission.MIPUSH_RECEIVE"
@@ -58,6 +59,8 @@
         <activity android:name=".ui.activity.LoginActivity"/>
         <activity android:name=".ui.activity.UserActivity"/>
         <activity android:name=".ui.activity.MyCollectActivity"/>
+        <activity android:name=".ui.activity.AboutActivity">
+        </activity>
         <activity android:name=".ui.activity.WBShareActivity">
         </activity>
         <activity
@@ -120,9 +123,12 @@
                 <action android:name="com.xiaomi.mipush.ERROR"/>
             </intent-filter>
         </receiver>
+        <receiver android:name="com.xiaomi.market.sdk.DownloadCompleteReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
 
-        <activity android:name=".ui.activity.AboutActivity">
-        </activity>
     </application>
 
 </manifest>

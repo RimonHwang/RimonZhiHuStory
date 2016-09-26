@@ -24,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -155,11 +156,14 @@ public class StoryFragment extends Fragment {
                 switch (item.getItemId()) {
                     case R.id.night_theme:
                         changeTheme();
-
+                        break;
+                    case R.id.check_update:
+                        MyApplication.appConfig.checkUpdate(getContext(),true);
                         break;
                     case R.id.about:
                         Intent intent = new Intent(getActivity(), AboutActivity.class);
                         getContext().startActivity(intent);
+                        break;
                 }
                 return true;
             }
@@ -436,13 +440,13 @@ public class StoryFragment extends Fragment {
 
         RelativeLayout relativeLayout = (RelativeLayout) drawerLayout.findViewById(R.id.drawer_header_background);
         TextView homePage = (TextView) drawerLayout.findViewById(R.id.home_page);
+        FrameLayout frameLayout = (FrameLayout) getActivity().findViewById(R.id.content);
 
         toolbar.setBackgroundResource(toolbarBackground.resourceId);
         relativeLayout.setBackgroundResource(drawerHeaderBackground.resourceId);
         homePage.setBackgroundResource(drawerHomeBackground.resourceId);
 
-
-        recycler.setBackgroundResource(colorBackground.resourceId);
+        frameLayout.setBackgroundResource(colorBackground.resourceId);
         int childCount = recycler.getChildCount();
         for (int childIndex = 0; childIndex < childCount; childIndex++) {
             ViewGroup childView = (ViewGroup) recycler.getChildAt(childIndex);

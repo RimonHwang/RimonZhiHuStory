@@ -29,7 +29,7 @@ public class GetNewsService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (intent != null){
-            final String firstId = intent.getStringExtra(Constants.FIRSTSTORYID);
+            final String firstId = intent.getStringExtra(Constants.FIRST_STORY_ID);
             //定时检查新日报
             scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
             scheduledExecutorService.scheduleWithFixedDelay(new Runnable() {
@@ -59,7 +59,7 @@ public class GetNewsService extends Service {
     public static void startActionGetNewStory(Context context, String param1) {
         Log.e("开启服务","start");
         Intent intent = new Intent(context, GetNewsService.class);
-        intent.putExtra(Constants.FIRSTSTORYID, param1);
+        intent.putExtra(Constants.FIRST_STORY_ID, param1);
         context.startService(intent);
     }
 

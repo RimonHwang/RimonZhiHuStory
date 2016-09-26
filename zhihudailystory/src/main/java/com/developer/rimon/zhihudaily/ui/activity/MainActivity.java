@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.FrameLayout;
 
 import com.developer.rimon.zhihudaily.Constants;
+import com.developer.rimon.zhihudaily.MyApplication;
 import com.developer.rimon.zhihudaily.R;
 import com.developer.rimon.zhihudaily.adapter.DrawerRecyclerAdapter;
 import com.developer.rimon.zhihudaily.entity.Collect;
@@ -21,11 +22,12 @@ import com.developer.rimon.zhihudaily.entity.User;
 import com.developer.rimon.zhihudaily.listener.OnGetListener;
 import com.developer.rimon.zhihudaily.ui.fragment.StoryFragment;
 import com.developer.rimon.zhihudaily.ui.fragment.ThemeFragment;
-import com.developer.rimon.zhihudaily.utils.weibo.AccessTokenKeeper;
 import com.developer.rimon.zhihudaily.utils.DateUtil;
 import com.developer.rimon.zhihudaily.utils.HttpUtil;
+import com.developer.rimon.zhihudaily.utils.weibo.AccessTokenKeeper;
 import com.google.gson.Gson;
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
+import com.xiaomi.market.sdk.XiaomiUpdateAgent;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -65,6 +67,9 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+
+
+
         initDrawer();
 
         if (getIntent().getBooleanExtra(Constants.FROM_LOGIN_ACTIVITY, false)) {
@@ -99,6 +104,9 @@ public class MainActivity extends BaseActivity {
             otherArrayList.addAll(themeList.others);
             drawerRecyclerAdapter.notifyDataSetChanged();
         }
+
+        MyApplication.appConfig.checkUpdate(this,false);
+        XiaomiUpdateAgent.update(this,true); //第二个参数为true时使用沙盒环境，否则使用线上环境
     }
 
     @Override

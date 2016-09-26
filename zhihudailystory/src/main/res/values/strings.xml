@@ -5,6 +5,8 @@
 
     <string name="main_toolbar_main_title">首页</string>
     <string name="main_toolbar_menu_night_theme">夜间模式</string>
+    <string name="main_toolbar_menu_check_update">检查新版本</string>
+    <string name="main_toolbar_menu_about">关于</string>
     <string name="main_new_story_indicator">今日热闻</string>
     <string name="main_drawer_login_text">请登录</string>
     <string name="main_drawer_offline_download">离线下载</string>
@@ -14,11 +16,16 @@
 
     <string name="login_message">欢迎使用简报\n\n登陆后可收藏文章哦！</string>
 
-    <string name="about">关于</string>
     <string name="about_name">RimonHwang</string>
     <string name="about_blog_address">博客地址:\n http://rimonhwang.com/</string>
     <string name="about_github_address">Github地址:\n https://github.com/RimonHwang</string>
     <string name="about_project_address">项目地址：\n https://github.com/RimonHwang/RimonZhiHuStory</string>
+
+    <string name="alert_dialog_title"> 有新版本可更新啦!</string>
+    <string name="alert_dialog_message"> 推荐你升级到最新版本v</string>
+    <string name="alert_dialog_positive_button"> 升级</string>
+    <string name="alert_dialog_negative_button"> 取消</string>
+    <string name="alert_dialog_neutral_button"> 忽略此版本</string>
 
     <!-- 分享成功失败的 Toast -->
     <string name="weibosdk_demo_toast_share_success">分享成功</string>

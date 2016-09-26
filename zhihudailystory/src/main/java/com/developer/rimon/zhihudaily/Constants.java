@@ -11,7 +11,7 @@ public class Constants {
     public static final int TYPE_DATE = 3;
     public static final int TYPE_FOOTER = 4;
 
-    public static final String FIRSTSTORYID = "firstStoryID";
+    public static final String FIRST_STORY_ID = "firstStoryID";
     public final static String ACTION_SEND = "com.developer.rimon.zhihudaily.sendBroadcast";
     public final static String MAIN_TO_STORY_DETAIL_INTENT_KEY_ID = "id";
     public static final String SAVE_FILE_NAME = "data";
