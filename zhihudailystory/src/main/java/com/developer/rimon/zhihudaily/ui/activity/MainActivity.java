@@ -27,7 +27,6 @@ import com.developer.rimon.zhihudaily.utils.HttpUtil;
 import com.developer.rimon.zhihudaily.utils.weibo.AccessTokenKeeper;
 import com.google.gson.Gson;
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
-import com.xiaomi.market.sdk.XiaomiUpdateAgent;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -106,7 +105,6 @@ public class MainActivity extends BaseActivity {
         }
 
         MyApplication.appConfig.checkUpdate(this,false);
-        XiaomiUpdateAgent.update(this,true); //第二个参数为true时使用沙盒环境，否则使用线上环境
     }
 
     @Override

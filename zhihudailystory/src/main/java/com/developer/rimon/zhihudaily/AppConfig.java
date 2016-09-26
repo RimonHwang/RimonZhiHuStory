@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.support.v7.app.AlertDialog;
+import android.widget.Toast;
 
 import com.xiaomi.market.sdk.UpdateResponse;
 import com.xiaomi.market.sdk.UpdateStatus;
@@ -69,9 +70,8 @@ public class AppConfig {
                             final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context, R.style.AlertDialog);
                             alertDialogBuilder.setTitle(R.string.alert_dialog_title);
                             alertDialogBuilder.setIcon(R.drawable.ic_launcher);
-                            alertDialogBuilder.setMessage(R.string.alert_dialog_message + updateInfo.versionName);
+                            alertDialogBuilder.setMessage(context.getResources().getString(R.string.alert_dialog_message) + updateInfo.versionName);
                             alertDialogBuilder.setCancelable(true);
-
                             alertDialogBuilder.setPositiveButton(R.string.alert_dialog_positive_button, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
@@ -98,6 +98,9 @@ public class AppConfig {
                         }
                         break;
                     case UpdateStatus.STATUS_NO_UPDATE:
+                        if (isManualCheckUpdate){
+                            Toast.makeText(context,"已是最新版本啦！",Toast.LENGTH_SHORT).show();
+                        }
                         // 无更新， UpdateResponse为null
                         break;
                     case UpdateStatus.STATUS_NO_WIFI:
@@ -117,6 +120,8 @@ public class AppConfig {
                 }
             }
         });
+
+        //TODO:发版前撤销沙盒模式
         XiaomiUpdateAgent.update(context);  //这种情况下, 若本地版本是debug版本则使用沙盒环境，否则使用线上环境或：
 //        XiaomiUpdateAgent.update(context, true);//第二个参数为true时使用沙盒环境，否则使用线上环境
     }

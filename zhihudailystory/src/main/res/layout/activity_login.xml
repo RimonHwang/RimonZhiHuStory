@@ -19,18 +19,25 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:src="@drawable/ic_launcher"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:layout_marginTop="80dp"
+            android:layout_margin="10dp"
+            android:text="@string/login_app_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:gravity="center"
             android:text="@string/login_message"/>
 
         <Button
             android:id="@+id/login_button"
+            android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/com_sina_weibo_sdk_login_button_with_account_text"/>

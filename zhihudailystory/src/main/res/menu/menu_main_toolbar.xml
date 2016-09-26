@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/night_theme"
-        android:title="@string/main_toolbar_menu_night_theme"
+        android:title="@string/main_toolbar_menu_night_mode"
         app:showAsAction="never"/>
 
     <item

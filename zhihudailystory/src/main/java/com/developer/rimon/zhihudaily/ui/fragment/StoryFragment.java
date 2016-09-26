@@ -140,7 +140,8 @@ public class StoryFragment extends Fragment {
         toolbar.setTitle("首页");
         drawerLayout = (DrawerLayout) getActivity().findViewById(R.id.drawer_layout);
         drawerRecycler = (RecyclerView) getActivity().findViewById(R.id.drawer_recycler);
-        toolbar.getMenu().findItem(R.id.night_theme).setTitle(MyApplication.appConfig.isNighTheme() ? "白天模式" : "夜间模式");
+        toolbar.getMenu().findItem(R.id.night_theme).setTitle(MyApplication.appConfig.isNighTheme() ? R.string.main_toolbar_menu_day_mode :
+                R.string.main_toolbar_menu_night_mode);
         toolbar.setNavigationIcon(R.drawable.ic_format_list_bulleted_white_24dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -406,11 +407,11 @@ public class StoryFragment extends Fragment {
     public void toggleThemeSetting() {
         if (MyApplication.appConfig.isNighTheme()) {
             getActivity().setTheme(R.style.DayTheme);
-            toolbar.getMenu().findItem(R.id.night_theme).setTitle("夜间模式");
+            toolbar.getMenu().findItem(R.id.night_theme).setTitle(R.string.main_toolbar_menu_night_mode);
             MyApplication.appConfig.setNightTheme(false);
         } else {
             getActivity().setTheme(R.style.NightTheme);
-            toolbar.getMenu().findItem(R.id.night_theme).setTitle("白天模式");
+            toolbar.getMenu().findItem(R.id.night_theme).setTitle(R.string.main_toolbar_menu_day_mode);
             MyApplication.appConfig.setNightTheme(true);
         }
     }

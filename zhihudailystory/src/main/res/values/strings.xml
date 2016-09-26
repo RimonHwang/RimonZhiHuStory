@@ -4,7 +4,8 @@
     <string name="welcome_text">简报\n by \n RimonHwang</string>
 
     <string name="main_toolbar_main_title">首页</string>
-    <string name="main_toolbar_menu_night_theme">夜间模式</string>
+    <string name="main_toolbar_menu_night_mode">夜间模式</string>
+    <string name="main_toolbar_menu_day_mode">白天模式</string>
     <string name="main_toolbar_menu_check_update">检查新版本</string>
     <string name="main_toolbar_menu_about">关于</string>
     <string name="main_new_story_indicator">今日热闻</string>
@@ -14,6 +15,7 @@
     <string name="main_drawer_homepage">首页</string>
     <string name="main_fragment_theme_chief_editor">主编</string>
 
+
     <string name="login_message">欢迎使用简报\n\n登陆后可收藏文章哦！</string>
 
     <string name="about_name">RimonHwang</string>
@@ -22,14 +24,16 @@
     <string name="about_project_address">项目地址：\n https://github.com/RimonHwang/RimonZhiHuStory</string>
 
     <string name="alert_dialog_title"> 有新版本可更新啦!</string>
-    <string name="alert_dialog_message"> 推荐你升级到最新版本v</string>
+    <string name="alert_dialog_message"> 推荐你升级到最新版本 v</string>
     <string name="alert_dialog_positive_button"> 升级</string>
     <string name="alert_dialog_negative_button"> 取消</string>
     <string name="alert_dialog_neutral_button"> 忽略此版本</string>
+    <string name="main_fragment_story_check_update_toast"> 已是最新版本啦！</string>
 
     <!-- 分享成功失败的 Toast -->
     <string name="weibosdk_demo_toast_share_success">分享成功</string>
     <string name="weibosdk_demo_toast_share_failed">分享失败</string>
     <string name="weibosdk_demo_toast_share_canceled">取消分享</string>
+    <string name="login_app_name">简报</string>
 
 </resources>

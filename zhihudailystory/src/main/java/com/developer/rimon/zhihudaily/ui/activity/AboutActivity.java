@@ -1,6 +1,7 @@
 package com.developer.rimon.zhihudaily.ui.activity;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -31,14 +32,27 @@ public class AboutActivity extends BaseActivity implements View.OnClickListener 
     @BindView(R.id.activity_about)
     LinearLayout activityAbout;
 
+    private String versionName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         ButterKnife.bind(this);
 
+        try {
+            versionName = getPackageManager().getPackageInfo(getPackageName(),0).versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        if (versionName !=null){
+            String title = getResources().getString(R.string.app_name )+ versionName;
+            toolbar.setTitle(title);
+        }else {
+            toolbar.setTitle(R.string.app_name);
+        }
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setTitle("关于");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
