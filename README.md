@@ -1,9 +1,9 @@
 ## 我的博客
 http://rimonhwang.com/
 
-# 简报（知乎日报第三方客户端）
- {% qnimg simplezhihustory_ic_launcher.png title:简报 alt:简报 extend:?normal:yes %}
-> APK下载地址：[点击下载](http://rimonhwang.com/posts/2016/09/08/52346/)
+# <img src="http://od6atq4th.bkt.clouddn.com/static/images/simplezhihustory_ic_launcher.png" width = "5%"  alt="简报" align=center />简报（知乎日报第三方客户端）
+
+> APK下载地址：[点击下载](http://rimonhwang.com/posts/2016/09/08/52346/)  
 > 项目源码地址：https://github.com/RimonHwang/RimonZhiHuStory
 
 ## 简介
@@ -37,7 +37,7 @@ http://rimonhwang.com/
 >* 网络请求 Retrofit
 >* 数据库 greenDao
 >* 响应式编程 RxJava（RxAndroid）
->* 图片加载 Glide  
+>* 图片加载 Glide
 >* Bmob后端云SDK
 >* 小米推送和更新SDK
 >* 新浪微博登陆分享SDK
