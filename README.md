@@ -28,7 +28,7 @@ http://rimonhwang.com/
 </div>
 
 <div  align="center">    
-<img src="http://od6atq4th.bkt.clouddn.com/static/images/zhihudaily_homepage.jpg?watermark/2/text/QFJpbW9uX0h3YW5n/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0Y3RjBGMA==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageView2/2/w/360/h/640/interlace/0/q/100" width = "250"  alt="日报详情" align=center /> <img src="http://od6atq4th.bkt.clouddn.com/static/images/zhihudaily_collect.jpg?watermark/2/text/QFJpbW9uX0h3YW5n/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0Y3RjBGMA==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageView2/2/w/360/h/640/interlace/0/q/100" width = "250"  alt="收藏界面" align=center />
+<img src="http://od6atq4th.bkt.clouddn.com/static/images/zhihudaily_story_detail.jpg?watermark/2/text/QFJpbW9uX0h3YW5n/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0Y3RjBGMA==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageView2/2/w/360/h/640/interlace/0/q/100" width = "250"  alt="日报详情" align=center /> <img src="http://od6atq4th.bkt.clouddn.com/static/images/zhihudaily_collect.jpg?watermark/2/text/QFJpbW9uX0h3YW5n/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0Y3RjBGMA==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageView2/2/w/360/h/640/interlace/0/q/100" width = "250"  alt="收藏界面" align=center />
 </div>
 
 
